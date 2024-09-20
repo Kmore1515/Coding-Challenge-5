@@ -5,3 +5,5 @@ const inventory = [
     {name: "Television", price: 300, quantity: 10},
     {name: "Laptop", price: 600, quantity: 25}
 ];
+// Task 2: Create an Orders Array of Order Objects
+let orders = []
