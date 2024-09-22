@@ -34,3 +34,13 @@ placeOrder("Jennifer Morris", [
 ]);
 
 console.log(orders);
+
+// Task 4: Create a Function to Calculate Total for an Order
+function calculateOrderTotal(order) {
+     return order.items.reduce((total, item) => { // This .reduce is taking the sum of all the numbers
+        let inventoryItem = inventory.find(invItem => invItem.name === item.name); // Searching the array for the correct items
+        return total + (inventoryItem ? inventoryItem.price * item.quantity : 0) // Taking the items and multiplying the quantity ordered by the price per item.
+    }, 0)
+};
+
+console.log(calculateOrderTotal(orders[0])); 
