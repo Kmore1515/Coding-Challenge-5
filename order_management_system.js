@@ -56,17 +56,17 @@ console.log(completeOrder("Jennifer Morris"));
 
 // Task 6: Create a Function to Check Pending Orders
 function checkPendingOrders() {
-    console.log("Pending Orders");
-    orders.forEach(order => {
+    console.log("Pending Orders"); // Add title for the pending orders.
+    orders.forEach(order => { // Searching for all the pending order.
         if (order.status === "Pending") {
-            console.log(`Order for ${order.customerName} is still pending.`, order.items)
+            console.log(`Order for ${order.customerName} is still pending.`, order.items) // This gives the output of the order and its items.
         }
     })
 }
 placeOrder("Kyle Morris", [
-    {name: "Laptop", quantity: 1},
+    {name: "Laptop", quantity: 1}, // Adding to the pending so i recieve an output.
 ]);
-checkPendingOrders()
+checkPendingOrders() 
 
 
 
