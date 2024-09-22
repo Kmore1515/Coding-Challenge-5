@@ -44,7 +44,7 @@ function calculateOrderTotal(order) {
 };
 
 console.log(calculateOrderTotal(orders[0])); 
-// Task 5: Create a Function to Mark an Order as Completed
+//Task 5: Create a Function to Mark an Order as Completed
 function completeOrder(customerName) {
     let order = orders.find( order => order.customerName === customerName); // Searching orders array for customer's order
     if (!order) {
@@ -54,6 +54,19 @@ function completeOrder(customerName) {
 };
 console.log(completeOrder("Jennifer Morris"));
 
+// Task 6: Create a Function to Check Pending Orders
+function checkPendingOrders() {
+    console.log("Pending Orders");
+    orders.forEach(order => {
+        if (order.status === "Pending") {
+            console.log(`Order for ${order.customerName} is still pending.`, order.items)
+        }
+    })
+}
+placeOrder("Kyle Morris", [
+    {name: "Laptop", quantity: 1},
+]);
+checkPendingOrders()
 
 
 
